@@ -24,7 +24,14 @@ You can also configure slack webhook urls for the Fail2ban and Watchtower contai
 
 ## How to contribute?
 
-If you found a bug or have an idea on how to improve the setup, feel free to send me a pull request or open an issue. Same if you have a question or need help with the setup.
+If you found a bug or have an idea on how to improve the setup, feel free to send me a pull request or open an issue. Same if you have a question or need help with the setup. And if you would like to support me, you can [buy me a beer](https://www.buymeacoffee.com/raeffs).
+
+</br>
+<p align="center">
+    <a href="https://www.buymeacoffee.com/raeffs">
+        <img width="10%" src="./beer.svg">
+    </a>
+</p>
 
 ## Attributions
 
