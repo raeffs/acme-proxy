@@ -1,0 +1,17 @@
+version: '3.8'
+
+services:
+  nginx:
+    extends:
+      file: 'nginx/service.yml'
+      service: 'nginx'
+  fail2ban:
+    extends:
+      file: 'fail2ban/service.yml'
+      service: 'fail2ban'
+    depends_on:
+      - 'nginx'
+  watchtower:
+    extends:
+      file: 'watchtower/service.yml'
+      service: 'watchtower'

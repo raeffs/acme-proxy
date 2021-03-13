@@ -1,0 +1,4 @@
+[DEFAULT]
+findtime = 24h
+maxretry = 1
+bantime = 4w

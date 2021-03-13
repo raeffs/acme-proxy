@@ -1,0 +1,19 @@
+version: '3.8'
+
+services:
+  nginx:
+    container_name: 'nginx'
+    image: 'nginx:latest'
+    restart: 'unless-stopped'
+    ports:
+      - '80:80'
+    volumes:
+      - '/etc/timezone:/etc/timezone:ro'
+      - '/etc/localtime:/etc/localtime:ro'
+      - './config/:/etc/nginx/templates/:ro'
+      - '../logs/:/logs/'
+    environment:
+      PRODUCTION_DOMAIN: '${PRODUCTION_DOMAIN}'
+      PRODUCTION_IP: '${PRODUCTION_IP}'
+      DEVELOPMENT_DOMAIN: '${DEVELOPMENT_DOMAIN}'
+      DEVELOPMENT_IP: '${DEVELOPMENT_IP}'

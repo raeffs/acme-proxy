@@ -1,0 +1,12 @@
+{
+  "name": "acme-proxy",
+  "version": "1.0.0",
+  "license": "MIT",
+  "author": "Raphael Fleischlin <git@raeffs.dev>",
+  "scripts": {
+    "restart": "yarn down && yarn up",
+    "up": "yarn stack up -d --remove-orphans",
+    "down": "yarn stack down -v --remove-orphans",
+    "stack": "docker-compose -f docker-compose.yml"
+  }
+}

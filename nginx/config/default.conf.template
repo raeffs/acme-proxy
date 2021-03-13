@@ -1,0 +1,20 @@
+
+server {
+    listen 80;
+    server_name ${PRODUCTION_DOMAIN} *.${PRODUCTION_DOMAIN};
+    location / {
+        proxy_pass http://${PRODUCTION_IP};
+        proxy_set_header Host $host;
+        access_log /logs/access.log;
+    }
+}
+
+server {
+    listen 80;
+    server_name ${DEVELOPMENT_DOMAIN} *.${DEVELOPMENT_DOMAIN};
+    location / {
+        proxy_pass http://${DEVELOPMENT_IP};
+        proxy_set_header Host $host;
+        access_log /logs/access.log;
+    }
+}
